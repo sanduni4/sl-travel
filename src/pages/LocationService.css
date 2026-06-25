@@ -1,0 +1,114 @@
+.location-page {
+  padding-bottom: 88px;
+}
+
+.location-card {
+  margin-top: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+}
+
+.location-main-icon {
+  font-size: 2.3rem;
+  color: var(--petra-orange);
+  margin-bottom: var(--sp-3);
+}
+
+.location-card h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--text-hi);
+}
+
+.location-card p {
+  color: var(--text-mid);
+  font-size: 0.85rem;
+}
+
+.location-status,
+.location-empty {
+  margin-top: var(--sp-4);
+  color: var(--text-lo);
+}
+
+.location-error {
+  margin-top: var(--sp-4);
+  display: flex;
+  gap: 8px;
+  color: var(--petra-orange);
+  font-size: 0.85rem;
+}
+
+.location-result {
+  margin-top: var(--sp-4);
+  background: var(--raised);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+}
+
+.location-map-btn,
+.location-retry-btn {
+  margin-top: var(--sp-4);
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.location-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--petra-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: var(--sp-4);
+}
+
+.location-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.location-place {
+  display: grid;
+  grid-template-columns: 72px 1fr 36px;
+  gap: var(--sp-3);
+  align-items: center;
+  background: var(--raised);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+}
+
+.location-place img {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--r-md);
+  object-fit: cover;
+}
+
+.location-place__info h3 {
+  font-size: 0.9rem;
+  color: var(--text-hi);
+  margin-bottom: 4px;
+}
+
+.location-place__info p {
+  font-size: 0.72rem;
+  color: var(--text-lo);
+  margin-bottom: 4px;
+}
+
+.location-place__info strong {
+  font-size: 0.78rem;
+  color: var(--petra-orange);
+}
+
+.location-place__nav {
+  color: var(--petra-orange);
+  font-size: 1.2rem;
+}

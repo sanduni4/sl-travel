@@ -1,0 +1,92 @@
+/* ── Navbar — Petra palette ── */
+
+.top-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: var(--nav-h);
+  background: rgba(22,15,10,0.88);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-nav);
+}
+.top-bar__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 100%; padding: 0 var(--sp-4);
+}
+
+/* Brand */
+.brand { display: flex; align-items: center; gap: var(--sp-2); text-decoration: none; }
+.brand-icon { font-size: 1.5rem; line-height: 1; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-main {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 400; font-style: italic;
+  color: var(--text-hi);
+}
+.brand-main span { color: var(--petra-orange); }
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.52rem; color: var(--text-lo);
+  letter-spacing: 0.15em; text-transform: uppercase;
+}
+
+/* Desktop nav */
+.desktop-nav { display: none; align-items: center; gap: var(--sp-1); }
+.nav-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 8px 16px; border-radius: var(--r-full);
+  color: var(--text-mid); font-size: 0.88rem; font-weight: 500;
+  transition: all var(--ease); text-decoration: none; min-height: 40px;
+}
+.nav-link:hover { color: var(--text-hi); background: var(--raised); }
+.nav-link.active { color: var(--petra-orange); background: var(--orange-dim); }
+.nav-badge {
+  background: var(--petra-crimson); color: #fff;
+  font-size: 0.62rem; font-weight: 700; padding: 1px 6px;
+  border-radius: var(--r-full); min-width: 18px; text-align: center;
+  font-family: var(--font-mono);
+}
+
+/* ── Bottom dock (mobile) ── */
+.bottom-nav {
+  position: fixed; bottom: -1px; left: 0; right: 0; z-index: 200;
+  height: 68px;
+  background: rgba(22,15,10,0.95);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid var(--border);
+  display: flex; align-items: stretch;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-nav__item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 3px;
+  color: var(--text-lo); text-decoration: none;
+  transition: color var(--ease); min-height: 48px;
+  -webkit-tap-highlight-color: transparent; position: relative;
+}
+.bottom-nav__item--active { color: var(--petra-orange); }
+.bottom-nav__item--active::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 28px; height: 2.5px; background: var(--petra-orange);
+  border-radius: 0 0 var(--r-full) var(--r-full);
+  box-shadow: 0 0 8px rgba(241,87,58,0.7);
+}
+.bottom-nav__item:hover { color: var(--text-mid); }
+.bottom-nav__icon { font-size: 1.28rem; line-height: 1; position: relative; }
+.bottom-nav__label {
+  font-size: 0.58rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; font-family: var(--font-mono);
+}
+.bottom-badge {
+  position: absolute; top: -5px; right: -10px;
+  background: var(--petra-crimson); color: #fff;
+  font-size: 0.58rem; font-weight: 700;
+  padding: 1px 4px; border-radius: var(--r-full);
+  min-width: 16px; text-align: center; line-height: 1.6;
+  font-family: var(--font-mono);
+}
+
+@media (min-width: 768px) {
+  .top-bar__inner { padding: 0 var(--sp-8); }
+  .desktop-nav { display: flex; }
+  .bottom-nav { display: none; }
+}

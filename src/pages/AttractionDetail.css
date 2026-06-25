@@ -1,0 +1,186 @@
+/* ── AttractionDetail — Petra palette ── */
+.detail-page { padding-top: var(--nav-h); padding-bottom: 88px; }
+
+/* Hero image */
+.detail-hero {
+  margin-bottom: 20px;
+  position: relative; width: 100%; height: 55vw;
+  min-height: 220px; max-height: 380px;
+  overflow: hidden; background: var(--raised);
+  padding-bottom: 10px;
+}
+.detail-hero__skeleton {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--surface) 25%, var(--raised) 50%, var(--surface) 75%);
+  background-size: 200% 100%; animation: shimmer 1.4s infinite;
+}
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+.detail-hero__img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0; transition: opacity 0.4s ease;
+  filter: brightness(0.8) saturate(1.15);
+}
+.detail-hero__img.loaded { opacity: 1; }
+.detail-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(22,15,10,0.2) 0%, rgba(22,15,10,0.88) 100%);
+  z-index: 1;
+}
+/* orange glow at bottom-left */
+.detail-hero__overlay::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle at 0% 100%, rgba(241,87,58,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Back */
+.detail-hero__back {
+  position: absolute; top: var(--sp-4); left: var(--sp-4); z-index: 3;
+  background: rgba(22,15,10,0.65); backdrop-filter: blur(10px);
+  color: var(--text-hi); border-radius: var(--r-full);
+  height: 40px; min-height: 40px; padding: 0 var(--sp-4);
+  font-size: 0.82rem; font-weight: 600; border: 1px solid var(--border);
+}
+.detail-hero__back:hover { border-color: var(--petra-orange); color: var(--petra-orange); }
+
+/* Fav */
+.detail-hero__fav {
+  position: absolute; top: var(--sp-4); right: var(--sp-4); z-index: 3;
+  width: 48px; height: 48px; font-size: 1.3rem; border: none;
+}
+
+/* Title at bottom */
+.detail-hero__info {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+  padding: var(--sp-4); display: flex; flex-direction: column; gap: var(--sp-2);
+}
+.detail-hero__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  color: #fff; font-weight: 400; font-style: italic;
+  line-height: 1.15; text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+}
+.detail-hero__rating { display: flex; align-items: center; gap: var(--sp-2); }
+.detail-hero__rating-num {
+  color: rgba(255,255,255,0.6); font-size: 0.76rem; font-family: var(--font-mono);
+}
+
+/* Body */
+.detail-body { padding-top: var(--sp-5); display: flex; flex-direction: column;
+ }
+
+/* Quick info */
+.detail-quick-info {
+  display: flex; flex-direction: column; gap: var(--sp-3);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: var(--sp-4); margin-bottom: var(--sp-5);
+}
+.detail-quick-info__item { display: flex; align-items: flex-start; gap: var(--sp-3); }
+.detail-quick-info__icon { font-size: 1.2rem; width: 26px; text-align: center; flex-shrink: 0; }
+.detail-quick-info__label {
+  display: block; font-family: var(--font-mono);
+  font-size: 0.6rem; color: var(--text-lo);
+  text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px;
+}
+.detail-quick-info__val { display: block; font-size: 0.88rem; color: var(--text-hi); font-weight: 500; }
+
+/* Sections */
+.detail-section { margin-bottom: var(--sp-5); }
+.detail-section__title {
+  font-family: var(--font-mono);
+  font-size: 0.66rem; font-weight: 700;
+  color: var(--petra-gold); text-transform: uppercase;
+  letter-spacing: 0.14em; margin-bottom: var(--sp-3);
+}
+.detail-description { font-size: 0.92rem; line-height: 1.8; color: var(--text-mid); }
+
+/* Tags */
+.detail-tags { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-5); }
+.detail-tag {
+  font-family: var(--font-mono); font-size: 0.7rem;
+  color: var(--petra-orange); background: var(--orange-dim);
+  border: 1px solid rgba(241,87,58,0.22);
+  padding: 4px 12px; border-radius: var(--r-full);
+}
+
+/* Distance */
+.distance-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: var(--sp-4);
+}
+.distance-card__loading { display: flex; align-items: center; gap: var(--sp-3); color: var(--text-lo); font-size: 0.85rem; }
+.distance-card__result { display: flex; align-items: baseline; gap: var(--sp-2); }
+.distance-card__km {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-style: italic; color: var(--nat-fg);
+}
+.distance-card__label { font-size: 0.82rem; color: var(--text-lo); }
+.distance-card__error { display: flex; flex-direction: column; gap: var(--sp-2); font-size: 0.83rem; color: var(--text-lo); }
+
+/* Actions */
+.detail-actions { display: flex; flex-direction: column; gap: var(--sp-3); }
+.detail-actions__maps, .detail-actions__fav {
+  width: 100%; justify-content: center; font-size: 0.92rem; height: 52px; min-height: 52px;
+}
+
+/* Coords */
+.detail-coords {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--text-lo); text-align: center; padding: var(--sp-4) 0;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .detail-hero { height: 42vw; max-height: 420px; }
+  .detail-quick-info { flex-direction: row; gap: var(--sp-6); }
+  .detail-actions { flex-direction: row; }
+}
+/* Desktop */
+@media (min-width: 1024px) {
+  .detail-page { padding-bottom: var(--sp-16); }
+  .detail-hero { max-height: 520px; }
+  .detail-body { display: grid; grid-template-columns: 1fr 340px; gap: var(--sp-8); align-items: start; }
+  .detail-main-col { grid-column: 1; }
+  .detail-side-col { grid-column: 2; position: sticky; top: calc(var(--nav-h) + var(--sp-4)); }
+}
+
+
+.detail-quick-info__icon,
+.badge svg,
+.detail-actions__maps svg,
+.detail-actions__fav svg,
+.distance-card__error svg,
+.detail-hero__back svg,
+.detail-hero__fav svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.detail-quick-info__icon {
+  color: var(--petra-orange);
+}
+
+.detail-actions__maps,
+.detail-actions__fav,
+.detail-hero__back,
+.distance-card__error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.distance-card__error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

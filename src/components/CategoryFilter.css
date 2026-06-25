@@ -1,0 +1,49 @@
+/* ── CategoryFilter — Petra palette ── */
+.category-filter {
+  display: flex;
+  gap: var(--sp-2);
+  overflow-x: auto;
+  padding: 4px 2px 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.category-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 var(--sp-5);
+  height: 42px;
+  min-height: 42px;
+  min-width: 48px;
+  white-space: nowrap;
+  border-radius: var(--r-full);
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-mid);
+  font-size: 0.83rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--ease);
+  font-family: var(--font-body);
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.category-chip:hover {
+  border-color: var(--petra-orange);
+  color: var(--petra-orange);
+  background: var(--orange-dim);
+}
+
+.category-chip.active {
+  background: var(--petra-orange);
+  border-color: var(--petra-orange);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: var(--orange-glow);
+}

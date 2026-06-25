@@ -1,0 +1,52 @@
+/* ── Favorites — Petra palette ── */
+.favorites-page { padding-bottom: 88px; }
+.favorites-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: var(--sp-4); margin-bottom: var(--sp-5); padding-top: var(--sp-5);
+}
+.favorites-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  font-style: italic; color: var(--text-hi);
+}
+.favorites-subtitle { color: var(--text-lo); font-size: 0.85rem; margin-top: 4px; font-family: var(--font-mono); }
+.favorites-clear {
+  flex-shrink: 0; font-size: 0.78rem; height: 40px; min-height: 40px;
+  padding: 0 var(--sp-4); color: var(--petra-rose);
+  border-color: rgba(188,56,56,0.3);
+}
+.favorites-clear:hover { background: var(--crimson-dim); border-color: var(--petra-rose); color: var(--petra-rose); }
+.favorites-note { font-size: 0.82rem; }
+.favorites-empty { padding-top: var(--sp-16); }
+@media (min-width: 768px) { .favorites-page { padding-bottom: var(--sp-16); } }
+
+.favorites-clear,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--petra-orange);
+}
+
+.empty-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.favorites-icon {
+  font-size: 1.2rem;
+}
+
+.favorites-clear svg,
+.btn-primary svg {
+  width: 18px;
+  height: 18px;
+}

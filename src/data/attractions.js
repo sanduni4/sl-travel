@@ -1,0 +1,223 @@
+/**
+ * Sri Lanka Attractions Dataset
+ * Contains sample attractions across Historical, Nature, and Hotels categories
+ */
+import Sigiriya from "../images/sigiriya.jpg";
+import temple_of_tooth from "../images/temple of tooth.jpg"; 
+import Gallefort from "../images/Gallefort.jpg";
+import Yala from "../images/Yala.jpg";
+import Mirissa from "../images/Mirissa.jpg";
+import Jetwing  from "../images/Jetwing.jpg";
+import Dambulla  from "../images/Dambulla.jpg";
+import Ella from "../images/ella.jpg";
+import Anuradapura  from "../images/Anuradapura.jpg";
+import Kandalama from "../images/kandalama.jpg";
+
+export const attractions = [
+  {
+    id: 1,
+    name: "Sigiriya Rock Fortress",
+    shortDescription: "Ancient rock fortress rising 200m above the jungle floor, a UNESCO World Heritage Site.",
+    fullDescription:
+      "Sigiriya, also known as Lion Rock, is an ancient rock fortress and palace ruin situated in the northern Matale District. Built in the 5th century by King Kashyapa, this UNESCO World Heritage Site features stunning frescoes, the famous mirror wall, and breathtaking panoramic views from the summit. The complex includes elaborate gardens considered among the oldest in the world, with fountains that still function today using a hydraulic system designed 1,500 years ago.",
+    category: "Historical",
+    location: "Matale District, Central Province",
+    lat: 7.9568,
+    lng: 80.7603,
+    city: "Sigiriya",
+    image: Sigiriya,
+    rating: 4.9,
+    openHours: "7:00 AM – 5:30 PM",
+    entryFee: "USD 30 (foreign visitors)",
+    tags: ["UNESCO", "Ancient", "Fortress", "Views"],
+  },
+  {
+    id: 2,
+    name: "Temple of the Tooth",
+    shortDescription: "Sacred Buddhist temple housing the relic of the tooth of the Buddha in Kandy.",
+    fullDescription:
+      "Sri Dalada Maligawa, or the Temple of the Sacred Tooth Relic, is a Buddhist temple in the city of Kandy, Sri Lanka. It is located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha. Since ancient times, the relic has played an important role in local politics because it is believed that whoever holds the relic holds the governance of the country. The temple is visited by thousands of pilgrims daily and hosts the spectacular Esala Perahera festival each year.",
+    category: "Historical",
+    location: "Kandy, Central Province",
+    lat: 7.2936,
+    lng: 80.6413,
+    city: "Kandy",
+    image: temple_of_tooth,
+    rating: 4.8,
+    openHours: "5:30 AM – 8:00 PM",
+    entryFee: "LKR 1,500",
+    tags: ["Buddhist", "Sacred", "Heritage", "Culture"],
+  },
+  {
+    id: 3,
+    name: "Galle Fort",
+    shortDescription: "A historic Dutch colonial fortified city on Sri Lanka's southwestern coast.",
+    fullDescription:
+      "Galle Fort, in the Bay of Galle on the southwest coast of Sri Lanka, was built first in 1588 by the Portuguese, then extensively fortified by the Dutch during the 17th century. It is a living, breathing historic town within massive stone ramparts. The fort contains streets lined with Dutch colonial buildings, mosques, churches, and boutique shops. Declared a UNESCO World Heritage Site in 1988, it remains one of the best examples of a fortified city built by Europeans in South and Southeast Asia.",
+    category: "Historical",
+    location: "Galle, Southern Province",
+    lat: 6.0328,
+    lng: 80.2168,
+    city: "Galle",
+    image: Gallefort,
+    rating: 4.7,
+    openHours: "Open 24 hours (Fort area)",
+    entryFee: "Free (Fort area)",
+    tags: ["Colonial", "UNESCO", "Architecture", "Coast"],
+  },
+  {
+    id: 4,
+    name: "Yala National Park",
+    shortDescription: "Sri Lanka's most visited wildlife park, home to leopards, elephants and diverse wildlife.",
+    fullDescription:
+      "Yala National Park is the most visited and second largest national park in Sri Lanka. The park consists of five blocks, two of which are open to the public. The park is best known for its variety of wildlife, including leopards — Yala has one of the highest densities of leopards in the world — as well as elephants, sloth bears, crocodiles, water buffalos, and over 215 bird species. The park is spread across 979 square kilometres and borders the Indian Ocean, offering spectacular coastal scenery alongside its wildlife rich interior.",
+    category: "Nature",
+    location: "Hambantota District, Southern Province",
+    lat: 6.3728,
+    lng: 81.5237,
+    city: "Hambantota",
+    image: Yala,
+    rating: 4.8,
+    openHours: "6:00 AM – 6:00 PM",
+    entryFee: "USD 25 + vehicle fee",
+    tags: ["Safari", "Wildlife", "Leopards", "Nature"],
+  },
+  {
+    id: 5,
+    name: "Horton Plains",
+    shortDescription: "Misty highland plateau with World's End cliff, grasslands, and unique cloud forest ecology.",
+    fullDescription:
+      "Horton Plains National Park is a protected area in the central highlands of Sri Lanka. The plateau, at an elevation of 2,100–2,300 metres, is carpeted in rolling grasslands and cloud forest, home to unique flora and fauna found nowhere else on Earth. The park's most famous attraction is World's End, a sheer cliff with an 880-metre drop offering breathtaking views on clear mornings. Baker's Falls is another highlight, a stunning 20-metre waterfall set in lush forest. The plains are a UNESCO World Heritage Site and critical watershed for the island.",
+    category: "Nature",
+    location: "Nuwara Eliya, Central Province",
+    lat: 6.8025,
+    lng: 80.8086,
+    city: "Nuwara Eliya",
+    image: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=800&q=80",
+    rating: 4.6,
+    openHours: "6:00 AM – 6:00 PM",
+    entryFee: "USD 15 + vehicle fee",
+    tags: ["Hiking", "Highlands", "UNESCO", "Cloud Forest"],
+  },
+  {
+    id: 6,
+    name: "Mirissa Beach",
+    shortDescription: "Idyllic crescent beach famous for whale watching, surfing and vibrant nightlife.",
+    fullDescription:
+      "Mirissa is a small town on the south coast of Sri Lanka, located in the Matara District. Once a quiet fishing village, Mirissa is now one of the country's most popular beach destinations, known for its picturesque crescent of golden sand fringed by coconut palms. The beach is world-famous as one of the best places on the planet to spot blue whales and sperm whales during the November to April season. Parrot Rock, a small island accessible at low tide, offers excellent views across the bay. The town also has a thriving seafood restaurant scene and beach bar culture.",
+    category: "Nature",
+    location: "Matara District, Southern Province",
+    lat: 5.9487,
+    lng: 80.4588,
+    city: "Matara",
+    image: Mirissa,
+    rating: 4.7,
+    openHours: "Open 24 hours (Beach)",
+    entryFee: "Free",
+    tags: ["Beach", "Whale Watching", "Surfing", "Sunsets"],
+  },
+  {
+    id: 7,
+    name: "Cinnamon Grand Colombo",
+    shortDescription: "Iconic 5-star landmark hotel in the heart of Colombo with world-class dining and spa.",
+    fullDescription:
+      "Cinnamon Grand Colombo is the flagship property of Cinnamon Hotels & Resorts, Sri Lanka's premier hospitality brand. Located on Galle Road in the heart of Colombo, this iconic five-star hotel offers 501 elegantly appointed rooms and suites with sweeping views of the city and the Indian Ocean. The hotel is renowned for its exceptional dining scene, with 11 restaurants and bars including the legendary Silk restaurant. World-class amenities include an outdoor pool, the Jetwing Spa, a state-of-the-art fitness centre, and extensive conference facilities. It has been welcoming guests for over four decades.",
+    category: "Hotels",
+    location: "Colombo 03, Western Province",
+    lat: 6.9073,
+    lng: 79.8539,
+    city: "Colombo",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+    rating: 4.5,
+    openHours: "24 hours (Hotel)",
+    entryFee: "From USD 150/night",
+    tags: ["Luxury", "5-Star", "Colombo", "Dining"],
+  },
+  {
+    id: 8,
+    name: "Jetwing Lighthouse",
+    shortDescription: "Dramatic clifftop luxury hotel in Galle designed by legendary architect Geoffrey Bawa.",
+    fullDescription:
+      "Jetwing Lighthouse is one of Sri Lanka's most celebrated architectural landmarks, designed by the legendary Sri Lankan architect Geoffrey Bawa and completed in 1997. Perched dramatically on a rocky promontory overlooking the Indian Ocean near Galle, the hotel seamlessly blends Sri Lankan heritage with contemporary luxury. The 64-room hotel is celebrated for its dramatic entrance staircase, sweeping ocean terraces, and stunning infinity pool overlooking the sea. Guests enjoy authentic Sri Lankan cuisine, world-class service, and direct access to the pristine beach below. The hotel has been consistently ranked among the finest boutique luxury properties in Asia.",
+    category: "Hotels",
+    location: "Dadella, Galle, Southern Province",
+    lat: 6.0249,
+    lng: 80.2050,
+    city: "Galle",
+    image: Jetwing,
+    rating: 4.9,
+    openHours: "24 hours (Hotel)",
+    entryFee: "From USD 200/night",
+    tags: ["Boutique", "Geoffrey Bawa", "Ocean View", "Architecture"],
+  },
+  {
+    id: 9,
+    name: "Dambulla Cave Temple",
+    shortDescription: "Magnificent ancient cave temple complex with 153 Buddha statues and 2,100 sq m of paintings.",
+    fullDescription:
+      "The Golden Temple of Dambulla is a World Heritage Site in Sri Lanka. This cave temple complex, the largest and best-preserved in Sri Lanka, dates back to the 1st century BC. The complex spans five caves, which contain 153 statues of Buddha, three statues of Sri Lankan kings, and four statues of gods and goddesses. The murals covering the walls and ceilings span 2,100 square metres and depict scenes from Buddha's life and the history of Sri Lanka. The temple has been a sacred pilgrimage site for over 22 centuries and continues to be an active place of worship.",
+    category: "Historical",
+    location: "Dambulla, Central Province",
+    lat: 7.8572,
+    lng: 80.6483,
+    city: "Dambulla",
+    image: Dambulla,
+    rating: 4.8,
+    openHours: "7:00 AM – 7:00 PM",
+    entryFee: "USD 15 (foreign visitors)",
+    tags: ["UNESCO", "Buddhist", "Cave", "Paintings"],
+  },
+  {
+    id: 10,
+    name: "Ella Rock & Nine Arches",
+    shortDescription: "Scenic highland village with famous Nine Arch Bridge and stunning tea country trekking.",
+    fullDescription:
+      "Ella is a small town in the Badulla District of Uva Province, Sri Lanka. Set in breathtaking highland scenery at an elevation of 1,041 metres, Ella is surrounded by tea plantations, waterfalls, and spectacular mountain views. The Nine Arch Bridge, built in 1921 entirely of brick and stone without a single piece of steel, is one of the most photographed structures in Sri Lanka and a masterpiece of British colonial engineering. Ella Rock hike rewards trekkers with panoramic views across the highlands, while Little Adam's Peak offers an easier alternative. The Ravana Falls, steeped in mythology, is a short drive away.",
+    category: "Nature",
+    location: "Badulla District, Uva Province",
+    lat: 6.8740,
+    lng: 81.0466,
+    city: "Badulla",
+    image: Ella,
+    rating: 4.7,
+    openHours: "Open (outdoor)",
+    entryFee: "Free",
+    tags: ["Bridge", "Hiking", "Tea Country", "Scenic"],
+  },
+  {
+    id: 11,
+    name: "Anuradhapura Sacred City",
+    shortDescription: "Ancient capital with towering stupas, sacred Bo Tree and ruins spanning 2,500 years of history.",
+    fullDescription:
+      "Anuradhapura is one of the ancient capitals of Sri Lanka, famous for its well-preserved ruins of an ancient Sri Lankan civilization. Founded in the 4th century BC, it was the largest city in the ancient world, and for many centuries served as the capital of Sri Lanka. The Sacred City of Anuradhapura is a UNESCO World Heritage Site, featuring the Jaya Sri Maha Bodhi — the oldest documented tree in the world, grown from a cutting of the tree under which the Buddha attained enlightenment — as well as massive dagobas (stupas), ancient palaces, and sacred bathing tanks. It remains one of the most revered Buddhist pilgrimage sites in Asia.",
+    category: "Historical",
+    location: "North Central Province",
+    lat: 8.3114,
+    lng: 80.4037,
+    city: "Anuradhapura",
+    image: Anuradapura,
+    rating: 4.7,
+    openHours: "Open 24 hours (City)",
+    entryFee: "USD 25 (Sacred City ticket)",
+    tags: ["UNESCO", "Ancient", "Buddhist", "Ruins"],
+  },
+  {
+    id: 12,
+    name: "Heritance Kandalama",
+    shortDescription: "Geoffrey Bawa masterpiece hotel built into a cliff face overlooking the Kandalama reservoir.",
+    fullDescription:
+      "Heritance Kandalama is one of Sri Lanka's most extraordinary hotels, designed by the legendary architect Geoffrey Bawa and opened in 1994. Carved into the jungle cliff face overlooking the ancient Kandalama reservoir and the distant Sigiriya Rock, the hotel is enveloped in vegetation and blends so seamlessly into its natural setting that birds nest in the corridors and monkeys visit the terraces. The hotel's long serpentine structure offers every room a stunning view over the water. Certified as a Green Globe Hotel for its commitment to sustainability, Heritance Kandalama is consistently ranked as one of the top eco-luxury hotels in Asia.",
+    category: "Hotels",
+    location: "Dambulla, Central Province",
+    lat: 7.9123,
+    lng: 80.7401,
+    city: "Dambulla",
+    image: Kandalama,
+    rating: 4.8,
+    openHours: "24 hours (Hotel)",
+    entryFee: "From USD 175/night",
+    tags: ["Eco-Luxury", "Geoffrey Bawa", "Architecture", "Nature"],
+  },
+];
+
+export const categories = ["All", "Historical", "Nature", "Hotels"];

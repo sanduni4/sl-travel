@@ -1,0 +1,247 @@
+/* ── Home Page — Petra palette ── */
+.home {
+  padding-top: var(--nav-h);
+  padding-bottom: 88px;
+}
+
+/* ── HERO — video background ── */
+.hero {
+  position: relative;
+  min-height: 72vw;
+  max-height: 540px;
+  display: flex;
+  align-items: center;   /* instead of flex-end */
+  overflow: hidden;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  z-index: 0;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(160deg,
+      rgba(22, 15, 10, 0.15) 0%,
+      rgba(22, 15, 10, 0.35) 45%,
+      rgba(22, 15, 10, 0.72) 100%);
+}
+
+.hero__overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  background: radial-gradient(circle at 0% 100%,
+      rgba(241, 87, 58, 0.28) 0%,
+      transparent 65%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 var(--sp-4) var(--sp-10);
+  width: 100%;
+  color: #fff;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #dac2b0;
+  margin-bottom: var(--sp-2);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.hero__eyebrow::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--petra-gold);
+  flex-shrink: 0;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 9vw, 4rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: var(--sp-3);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+}
+
+.hero__title em {
+  color: var(--petra-orange);
+  font-style: normal;
+}
+
+.hero__subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: var(--sp-6);
+  max-width: 360px;
+  line-height: 1.65;
+}
+
+.hero__search {
+  width: 50%;
+  align-items: center;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin-left: 12px;
+}
+
+.search-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero__search input {
+  background: rgba(22, 15, 10, 0.78);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.hero__search input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.hero__search input:focus {
+  border-color: var(--petra-orange);
+  background: rgba(22, 15, 10, 0.92);
+}
+
+/* ── Stats bar ── */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-4) var(--sp-6);
+  margin: var(--sp-4) 0 var(--sp-6);
+}
+
+.stats-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stats-bar__num {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--petra-orange);
+  line-height: 1;
+}
+
+.stats-bar__label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--text-lo);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stats-bar__divider {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+}
+
+/* ── Sections ── */
+.home-section {
+  margin-bottom: var(--sp-8);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-hi);
+  margin-bottom: var(--sp-4);
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+  gap: var(--sp-3);
+}
+
+.results-header .section-title {
+  margin-bottom: 0;
+}
+
+.results-count {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--petra-orange);
+  background: var(--orange-dim);
+  border: 1px solid rgba(241, 87, 58, 0.25);
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+}
+
+/* ── Tablet ── */
+@media (min-width: 640px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero__content {
+    padding: 0 var(--sp-6) var(--sp-16);
+  }
+}
+
+/* ── Desktop ── */
+@media (min-width: 1024px) {
+  .home {
+    padding-bottom: var(--sp-16);
+  }
+
+  .hero {
+    min-height: 500px;
+    max-height: 620px;
+  }
+
+  .hero__content {
+    padding: 0 var(--sp-8) var(--sp-16);
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+#explore-category {
+  scroll-margin-top: 90px;
+}
