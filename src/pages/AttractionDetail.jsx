@@ -126,6 +126,7 @@ export default function AttractionDetail({ favorites, onToggleFavorite }) {
         </div>
       </div>
 
+
       <div className="container detail-body">
         {/* ── Main column ── */}
         <div className="detail-main-col">
