@@ -1,7 +1,3 @@
-/**
- * CategoryFilter — horizontal scrollable chip filter bar
- */
-
 import { categories } from "../data/attractions";
 import "./CategoryFilter.css";
 import {

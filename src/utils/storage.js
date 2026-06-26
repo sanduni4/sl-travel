@@ -1,7 +1,3 @@
-/**
- * LocalStorage utilities for persisting favorites and user preferences
- */
-
 const FAVORITES_KEY = "sl_travel_favorites";
 const PREFS_KEY = "sl_travel_prefs";
 

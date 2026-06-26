@@ -1,12 +1,3 @@
-/**
- * Geolocation utilities
- * Uses the browser Geolocation API to get user position and calculate distances
- */
-
-/**
- * Get the user's current position
- * Returns a Promise resolving to { lat, lng } or rejecting with an error message
- */
 export function getUserLocation() {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {

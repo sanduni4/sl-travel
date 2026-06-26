@@ -1,7 +1,3 @@
-/**
- * Home Page — main discovery page with hero, search, category filter, and attraction grid
- */
-
 import { useState, useEffect, useMemo } from "react";
 import { attractions } from "../data/attractions";
 import { savePrefs, getPrefs } from "../utils/storage";
@@ -109,13 +105,15 @@ export default function Home({ favorites, onToggleFavorite }) {
           <div className="stats-bar__divider" />
 
           <div className="stats-bar__item">
-            <span className="stats-bar__num">{favorites.length}</span>
+            <span className="stats-bar__num">
+              {attractions.filter((a) => favorites.includes(a.id)).length}
+            </span>
             <span className="stats-bar__label">Saved</span>
           </div>
         </div>
 
         <section id="explore-category" className="home-section">
-           <h2 className="section-title">Explore by Category</h2>
+          <h2 className="section-title">Explore by Category</h2>
           <CategoryFilter selected={category} onChange={handleCategoryChange} />
         </section>
 
@@ -125,8 +123,8 @@ export default function Home({ favorites, onToggleFavorite }) {
               {search
                 ? `Results for "${search}"`
                 : category === "All"
-                ? "All Attractions"
-                : category}
+                  ? "All Attractions"
+                  : category}
             </h2>
 
             <span className="results-count">{filtered.length} found</span>

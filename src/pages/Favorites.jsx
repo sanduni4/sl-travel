@@ -1,9 +1,3 @@
-/**
- * Favorites Page
- * Shows all saved attractions, persisted via LocalStorage
- * Allows removing individual favorites or clearing all
- */
-
 import { Link } from "react-router-dom";
 import { attractions } from "../data/attractions";
 import AttractionCard from "../components/AttractionCard";

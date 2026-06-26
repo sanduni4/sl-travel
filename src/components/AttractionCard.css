@@ -1,5 +1,3 @@
-/* ── AttractionCard — Petra palette ── */
-
 .attraction-card {
   cursor: pointer;
   display: flex;
@@ -155,11 +153,12 @@
 }
 
 .attraction-card__desc {
-  font-size: 0.82rem;
-  color: var(--text-mid);
-  line-height: 1.55;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  display: box;
+
+  line-clamp: 2;          /* Standard property */
+  -webkit-line-clamp: 2;  /* Chrome, Edge, Safari */
+
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

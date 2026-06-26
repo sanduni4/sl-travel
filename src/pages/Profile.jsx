@@ -1,7 +1,3 @@
-/**
- * Profile Page — traveller dashboard, saved travel info, app preferences
- */
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {

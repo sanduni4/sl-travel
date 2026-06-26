@@ -1,9 +1,3 @@
-/**
- * App.jsx — Root component
- * Sets up React Router, manages global favorites state,
- * bridges LocalStorage persistence with React state
- */
-
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -15,22 +9,18 @@ import { getFavorites, toggleFavorite } from "./utils/storage";
 import "./styles/global.css";
 import { FiMap } from "react-icons/fi";
 import LocationService from "./pages/LocationService";
+import { attractions } from "./data/attractions";
 
 export default function App() {
   // Initialize favorites from LocalStorage
   const [favorites, setFavorites] = useState(() => getFavorites());
 
-  /**
-   * Toggle a favorite: updates both LocalStorage and React state
-   * This ensures the UI updates instantly without a page reload
-   */
   function handleToggleFavorite(id) {
     const updated = toggleFavorite(id);
     setFavorites(updated);
   }
 
-  // Sync state if LocalStorage changes in another tab
-  useEffect(() => {
+ useEffect(() => {
     function handleStorage(e) {
       if (e.key === "sl_travel_favorites") {
         setFavorites(getFavorites());
@@ -40,9 +30,13 @@ export default function App() {
     return () => window.removeEventListener("storage", handleStorage);
   }, []);
 
+  const savedCount = attractions.filter((a) =>
+  favorites.includes(a.id)
+).length;
+
   return (
     <BrowserRouter>
-      <Navbar favCount={favorites.length} />
+<Navbar favCount={savedCount} />
       <Routes>
         <Route
           path="/"

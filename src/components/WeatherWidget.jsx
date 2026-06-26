@@ -1,8 +1,3 @@
-/**
- * WeatherWidget — shows current weather for an attraction city
- * Handles loading, error, and demo mode states
- */
-
 import { useState, useEffect } from "react";
 import { fetchWeather, getWeatherIconUrl } from "../services/weather";
 import "./WeatherWidget.css";

@@ -1,8 +1,3 @@
-/**
- * AttractionCard — displays a single attraction in grid/list view
- * Supports lazy-loaded images, favorites toggle, and navigation to detail page
- */
-
 import { useNavigate } from "react-router-dom";
 import "./AttractionCard.css";
 import {

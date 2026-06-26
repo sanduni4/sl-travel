@@ -1,8 +1,3 @@
-/**
- * AttractionDetail Page
- * Shows full details: large image, description, weather, distance, Google Maps link, favorites
- */
-
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { attractions } from "../data/attractions";
@@ -172,7 +167,7 @@ export default function AttractionDetail({ favorites, onToggleFavorite }) {
 
           {/* Description */}
           <section className="detail-section">
-            <h2 className="detail-section__title">// About</h2>
+            <h2 className="detail-section__title">* About</h2>
             <p className="detail-description">{attraction.fullDescription}</p>
           </section>
 

@@ -1,7 +1,3 @@
-/**
- * Sri Lanka Attractions Dataset
- * Contains sample attractions across Historical, Nature, and Hotels categories
- */
 import Sigiriya from "../images/sigiriya.jpg";
 import temple_of_tooth from "../images/temple of tooth.jpg"; 
 import Gallefort from "../images/Gallefort.jpg";
