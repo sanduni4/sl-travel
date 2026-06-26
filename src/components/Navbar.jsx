@@ -17,18 +17,60 @@ export default function Navbar({ favCount = 0 }) {
               <span className="brand-sub">Travel Guide</span>
             </span>
           </Link>
+
+          <nav className="desktop-nav" aria-label="Desktop navigation">
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/favorites"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Saved
+              {favCount > 0 && <span className="nav-badge">{favCount}</span>}
+            </NavLink>
+
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Profile
+            </NavLink>
+          </nav>
         </div>
       </header>
 
       <nav className="bottom-nav" aria-label="Mobile navigation">
-        <NavLink to="/" end className={({ isActive }) => "bottom-nav__item" + (isActive ? " bottom-nav__item--active" : "")}>
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            "bottom-nav__item" + (isActive ? " bottom-nav__item--active" : "")
+          }
+        >
           <span className="bottom-nav__icon">
             <FiHome />
           </span>
           <span className="bottom-nav__label">Home</span>
         </NavLink>
 
-        <NavLink to="/favorites" className={({ isActive }) => "bottom-nav__item" + (isActive ? " bottom-nav__item--active" : "")}>
+        <NavLink
+          to="/favorites"
+          className={({ isActive }) =>
+            "bottom-nav__item" + (isActive ? " bottom-nav__item--active" : "")
+          }
+        >
           <span className="bottom-nav__icon">
             <FiHeart />
             {favCount > 0 && <span className="bottom-badge">{favCount}</span>}
@@ -36,7 +78,12 @@ export default function Navbar({ favCount = 0 }) {
           <span className="bottom-nav__label">Saved</span>
         </NavLink>
 
-        <NavLink to="/profile" className={({ isActive }) => "bottom-nav__item" + (isActive ? " bottom-nav__item--active" : "")}>
+        <NavLink
+          to="/profile"
+          className={({ isActive }) =>
+            "bottom-nav__item" + (isActive ? " bottom-nav__item--active" : "")
+          }
+        >
           <span className="bottom-nav__icon">
             <FiInfo />
           </span>

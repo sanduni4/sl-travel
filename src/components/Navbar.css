@@ -90,3 +90,44 @@
   .desktop-nav { display: flex; }
   .bottom-nav { display: none; }
 }
+
+.top-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  color: var(--text-lo);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--petra-orange);
+}
+
+.nav-badge {
+  margin-left: 6px;
+  background: var(--petra-orange);
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 0.65rem;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
