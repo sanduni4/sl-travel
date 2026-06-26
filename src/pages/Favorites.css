@@ -50,3 +50,39 @@
   width: 18px;
   height: 18px;
 }
+
+/* ---------- Favorites Info Banner ---------- */
+.favorites-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+  margin: 14px 0 18px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.favorites-note svg {
+  width: 18px;
+  height: 18px;
+  color: var(--petra-orange);
+  flex-shrink: 0;
+}
+
+.favorites-note span:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.favorites-note span:last-child {
+  flex: 1;
+  margin: 0;
+}

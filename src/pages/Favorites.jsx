@@ -38,11 +38,13 @@ export default function Favorites({ favorites, onToggleFavorite }) {
         {/* Persistence note */}
         {savedAttractions.length > 0 && (
           <div className="banner banner-info favorites-note">
-            <span>
-              <FiBookmark />
-            </span>
-            <span>Your favourites are saved locally and will persist after closing the browser.</span>
+            <FiBookmark className="favorites-note__icon" />
+
+            <p>
+              Your favourites are saved locally and will persist after closing the browser.
+            </p>
           </div>
+          
         )}
 
         {/* Grid of saved attractions */}
